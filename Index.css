@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* -------------------------------------Rating------------------------------------------ */
+
+.card {
+    margin-left: 60%;
+    margin-top: 10%;
+    box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 1);
+}
+
+.rate {
+    display: inline-block;
+}
+
+.rate:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate:not(:checked)>label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+}
+
+.rate:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.rate>input:checked~label {
+    color: #ffc700;
+}
+
+.rate:not(:checked)>label:hover,
+.rate:not(:checked)>label:hover~label {
+    color: #deb217;
+}
+
+.rate>input:checked+label:hover,
+.rate>input:checked+label:hover~label,
+.rate>input:checked~label:hover,
+.rate>input:checked~label:hover~label,
+.rate>label:hover~input:checked~label {
+    color: #c59b08;
+}
+
+.name {
+    width: 100%;
+    height: 150px;
+}
+
+
+/* ---------------Input Text---------------------- */
+
+.form-control {
+    margin-top: 10px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 12px;
+    line-height: 3;
+}
+
+
+/* ---------------Button---------------------- */
+
+.name button {
+    width: 80px;
+    border: none;
+    background: none;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.name button:hover {
+    background: #deb217;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+
+/* -------------------------------------Details------------------------------------------ */
+
+.details {
+    position: absolute;
+    margin-top: -28%;
+    width: 50%;
+    height: 60vh;
+}
+
+
+/* ---------------Person 1---------------------- */
+
+.details .person1 {
+    width: 90%;
+    height: 25vh;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: whitesmoke solid 2px;
+}
+
+.person1 .name {
+    width: 80%;
+    height: 8vh;
+    position: relative;
+}
+
+.person1 .name h5 {
+    font-size: 15px;
+}
+
+.person1 .name span {
+    font-size: 8px;
+    position: absolute;
+}
+
+.person1 .rating {
+    width: 80%;
+    height: 5vh;
+}
+
+.person1 .message {
+    width: 80%;
+    height: 5vh;
+}
+
+.person1 .message h5 {
+    font-size: 12px;
+    padding: 5px 0px;
+}
+
+.person1 .comment {
+    width: 80%;
+    height: 4vh;
+}
+
+.person1 .comment span {
+    font-size: 10px;
+    padding: 5px 10px;
+}
+
+.person1 .comment span:hover {
+    background: whitesmoke;
+}
+
+
+/* ---------------Person 2---------------------- */
+
+.details .person2 {
+    width: 90%;
+    height: 22vh;
+    margin: auto;
+}
+
+.details .person2 {
+    width: 90%;
+    height: 25vh;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: whitesmoke solid 2px;
+}
+
+.person2 .name {
+    width: 80%;
+    height: 8vh;
+    position: relative;
+}
+
+.person2 .name h5 {
+    font-size: 15px;
+}
+
+.person2 .name span {
+    font-size: 8px;
+    position: absolute;
+}
+
+.person2 .rating {
+    width: 80%;
+    height: 5vh;
+}
+
+.person2 .message {
+    width: 80%;
+    height: 5vh;
+}
+
+.person2 .message h5 {
+    font-size: 12px;
+    padding: 5px 0px;
+}
+
+.person2 .comment {
+    width: 80%;
+    height: 4vh;
+}
+
+.person2 .comment span {
+    font-size: 10px;
+    padding: 5px 10px;
+}
+
+.person2 .comment span:hover {
+    background: whitesmoke;
+}
+
+
+/* -------------------------------------Media Query------------------------------------------ */
+
+@media (max-width:321px) {
+    .container {
+        width: 100%;
+    }
+    .card {
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+    .details {
+        margin-top: 20px;
+        width: 90%;
+    }
+    .details .rating {
+        width: 100%;
+    }
+}
+
+@media (max-width:376px) and (min-width:321px) {
+    .container {
+        width: 100%;
+    }
+    .card {
+        margin-top: 40px;
+        margin-left: 50px;
+    }
+    .details {
+        margin-top: 20px;
+        width: 90%;
+    }
+    .details .rating {
+        width: 100%;
+    }
+}
+
+@media (max-width:426px) and (min-width:376px) {
+    .container {
+        width: 100%;
+    }
+    .card {
+        margin-top: 40px;
+        margin-left: 70px;
+    }
+    .details {
+        margin-top: 20px;
+        width: 90%;
+    }
+    .details .rating {
+        width: 100%;
+    }
+}
+
+@media (max-width:769px) and (min-width:426px) {
+    .container {
+        width: 100%;
+        height: 80vh;
+    }
+    .details {
+        position: absolute;
+        margin-top: -28%;
+        width: 50%;
+        height: 60vh;
+    }
+    .details .rating {
+        width: 100%;
+    }
+}
