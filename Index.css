@@ -313,8 +313,8 @@ input::-webkit-input-placeholder {
         color: black;
     }
     .details {
-        position: absolute;
-        margin-top: -20%;
+        /* position: absolute;
+        margin-top: -20%; */
         width: 50%;
         height: 60vh;
     }
